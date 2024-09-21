@@ -1,0 +1,63 @@
+body{
+    margin:0;
+    padding:0;
+}
+
+
+#container{
+    width:400px;
+    height:485px;
+    background-color: black;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 100px;
+
+}
+
+.row{
+    padding:5px;
+    display:flex;
+    justify-content: center;
+}
+
+button{
+    height:55px;
+    width:80px;
+    margin:10px;
+    background-color: rgb(220, 216, 216);
+    border-radius:5px;
+    align-items: center;
+    font-size: 20px;
+}
+
+#input-display{
+    text-align:center;
+}
+
+input{
+    height:50px;
+    width:380px;
+    margin:10px;
+    font-size: 25px;
+    border-radius: 8px;
+}
+
+#equal{
+    background-color: rgb(238, 160, 51);
+}
+
+#off{
+    background-color: red;
+    height:46px;
+
+}
+
+#backspace{
+    background-color: rgb(136, 125, 125);
+    height:46px;
+}
+
+#AC{
+    padding: 5px;
+    display: flex;
+}

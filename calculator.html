@@ -1,0 +1,105 @@
+<DOCTYPE html>
+    <html>
+        <head>
+            <title>Calculator</title>
+            <link rel ="stylesheet" href="calculator.css">
+        </head>
+        <body>
+            <div>
+                <div id="container">
+                    <div id="input-display">
+                        <input type="text" id="display" readonly>
+                    </div>
+                    <div id="AC">
+                        <div >
+                            <button id="off" onclick="clearDisplay()">AC</button>
+                        </div>
+                        <div >
+                            <button id="backspace" onclick="backspace()">Back</button>
+                        </div>
+                    </div>
+                    <div class="row 2">
+                        <div >
+                            <button onclick="appendToDisplay('7')">7</button>
+                        </div>
+                        <div>
+                            <button onclick="appendToDisplay('8')">8</button>
+                        </div>
+                        <div>
+                            <button  onclick="appendToDisplay('9')">9</button>
+                        </div>
+                        <div>
+                            <button  onclick="appendToDisplay('/')">/</button>
+                        </div>
+                    </div>
+                    <div class="row 3" >
+                        <div>
+                            <button onclick="appendToDisplay('4')">4</button>
+                        </div>
+                        <div>
+                            <button onclick="appendToDisplay('5')">5</button>
+                        </div>
+                        <div>
+                            <button  onclick="appendToDisplay('6')">6</button>
+                        </div>
+                        <div>
+                            <button  onclick="appendToDisplay('*')">*</button>
+                        </div>
+                    </div>
+                    <div class="row 4">
+                        <div>
+                            <button  onclick="appendToDisplay('1')">1</button>
+                        </div>
+                        <div>
+                            <button  onclick="appendToDisplay('2')">2</button>
+                        </div>
+                        <div>
+                            <button  onclick="appendToDisplay('3')">3</button>
+                        </div>
+                        <div >
+                            <button  onclick="appendToDisplay('-')">-</button>
+                        </div>
+                    </div>
+                    <div class="row 5" >
+                        <div>
+                            <button  onclick="appendToDisplay('.')">.</button>
+                        </div>
+                        <div>
+                            <button  onclick="appendToDisplay('0')">0</button>
+                        </div>
+                        <div>
+                            <button id="equal" onclick="calculateResult()">=</button>
+                        </div>
+                        <div>
+                            <button  onclick="appendToDisplay('+')">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function appendToDisplay(value){
+                    document.getElementById('display').value += value;
+                }
+
+                function clearDisplay(){
+                    document.getElementById('display').value ="";
+                }
+
+                function backspace(){
+                    let display = document.getElementById('display')
+                    display.value = display.value.slice(0,-1)
+                }
+
+                function calculateResult(){
+                    let result = eval(document.getElementById('display').value);
+                    document.getElementById('display').value = result; 
+                }
+
+                myeval()
+                {
+                    let result = document.getElementById('display').value;
+                }
+            </script>
+        </body>                    
+    </html>                    
+                        
